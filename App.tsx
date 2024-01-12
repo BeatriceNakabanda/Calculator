@@ -15,6 +15,7 @@ import {
   Text,
   useColorScheme,
   View,
+  TextInput
 } from 'react-native';
 
 import {
@@ -76,18 +77,26 @@ function App(): React.JSX.Element {
     //  <Header /> 
         <View
           style={styles.container}>
-            <View style={styles.half1}>
+            <TextInput />
+            {/* <View style={[styles.half1, styles.hal2x]}>
+              
+            </View>
+            <View style={[styles.half2, styles.hal2x]}>
+
+              <View style={[styles.half22, styles.hal2x]}>
+                <Text style={styles.text}>1/2</Text>
+              </View>
+              <View style={[styles.half21, styles.hal2x]}>
+                <Text style={styles.text}>2/2</Text>
+              </View>
 
             </View>
-            <View style={styles.half2}>
+            <View style={[styles.half3, styles.hal2x]}>
 
             </View>
-            <View style={styles.half3}>
+            <View style={[styles.half4, styles.hal2x]}>
 
-            </View>
-            <View style={styles.half4}>
-
-            </View>
+            </View> */}
           
         </View>
     //   </ScrollView>
@@ -98,6 +107,10 @@ function App(): React.JSX.Element {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'row'
+  },
+  text: {
+    fontSize: 20
   },
   welcome: {
     fontSize: 20,
@@ -122,29 +135,30 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   }, 
   half1: {
-    flex: 1,
     backgroundColor: 'white'
   },
   half2: {
     flex: 1,
-    backgroundColor: 'blue'
   },
   half21: {
-    flex: 1,
-    backgroundColor: 'white'
+    backgroundColor: '#BFCFE7',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   half22: {
-    flex: 1,
-    backgroundColor: 'blue'
+    backgroundColor: 'blue',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   half3: {
-    flex: 1,
     backgroundColor: 'green'
   },
   half4: {
-    flex: 1,
     backgroundColor: 'yellow'
   },
+  hal2x: {
+    flex: 1,
+  }
 
 });
 
